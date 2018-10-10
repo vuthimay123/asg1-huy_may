@@ -1,6 +1,5 @@
-
 import java.util.Scanner;
-public class Dictionary_Management {
+ class Dictionary_Management {
     public static Dictionary dictionary1 =new Dictionary();
 
     public static void insertFromCommandline(){
