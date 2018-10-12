@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
- class Dictionary_Management {
+class Dictionary_Management {
     public static Dictionary dictionary1 =new Dictionary();
 
 
@@ -23,17 +23,20 @@ import java.util.Scanner;
 
     }
     public static void insertFromFile()  {
-        File file=new File("dictionaries.txt");
-//        FileInputStream fis= null;
+        File file=new File("C:\\Users\\dell\\IdeaProjects\\asg1-huy_may\\asg1-huy_may\\Dictionary1\\src\\dictionaries.txt");
+        if(file.exists()==false)
+            System.out.println("file khong ton tai");
+        else
         try {
             FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr= new InputStreamReader(fis);
             BufferedReader buffer=new BufferedReader(isr);
-            String a=buffer.readLine();
+            String a="";
+            a=buffer.readLine();
             while(a != null){
                String[] b= a.split("[   ]",2);
                  String ta =b[0];
-                 String tv=b[1];
+                 String tv=b[1].trim();
                 Word add1=new Word(ta,tv);
                 dictionary1.array.add(add1);
                 a=buffer.readLine();
@@ -52,9 +55,9 @@ import java.util.Scanner;
          int dem=0;
          for(int i=0;i<dictionary1.array.size();i++)
          {
-             if(a.equals(dictionary1.array.get(i).getWord_taget())) {
+             if(a.equals(dictionary1.array.get(i).getWord_target())) {
                  dem++;
-                 System.out.println("Nghia cua tu can tim la:" + dictionary1.array.get(i).getWord_explain());
+                 System.out.println("Nghia cua tu can tim la: " + dictionary1.array.get(i).getWord_explain());
                  break;
              }
 

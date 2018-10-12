@@ -7,11 +7,11 @@ public class Word {
             this.word_explain = word_explain;
         }
 
-        public String getWord_taget() {
+        public String getWord_target() {
             return word_taget;
         }
 
-        public void setWord_taget(String word_taget) {
+        public void setWord_target(String word_taget) {
             this.word_taget = word_taget;
         }
 

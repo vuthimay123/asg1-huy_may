@@ -7,7 +7,7 @@ public class DictionaryCommandline {
         int i=0;
         while(i!=Dictionary_Management.dictionary1.array.size())
         {
-            System.out.println("|"+(i+1)+"        |"+ Dictionary_Management.dictionary1.array.get(i).getWord_taget()
+            System.out.println("|"+(i+1)+"        |"+ Dictionary_Management.dictionary1.array.get(i).getWord_target()
                     +"     |"+ Dictionary_Management.dictionary1.array.get(i).getWord_explain());
             i++;
         }
