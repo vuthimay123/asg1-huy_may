@@ -16,7 +16,7 @@ public class DictionaryCommandline {
     public static void dictionarySearcher() {
         String a = "";
         Scanner scanner = new Scanner(System.in);
-        System.out.println("moi nhap tu:");
+        System.out.println("Moi Nhap:");
         a = scanner.next();
         int dem = 0;
         for (int i = 0; i < Dictionary_Management.dictionary1.array.size(); i++) {
@@ -26,7 +26,7 @@ public class DictionaryCommandline {
             }
         }
         if (dem == 0)
-            System.out.println("khong tim thay tu");
+            System.out.println("Khong tim thay nhung tu nhu tren!");
     }
 
 }
